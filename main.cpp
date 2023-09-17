@@ -4,7 +4,10 @@
 #include "Vectors.h"
 #include "Render.h"
 
-void buildImageBuffer(std::vector<Vec3f>& imageBuffer, const size_t& width, const size_t& height, const float& colourLimit) {
+void buildImageBuffer(std::vector<Vec3f>& imageBuffer,
+                      const size_t& width,
+                      const size_t& height,
+                      const float& colourLimit) {
     float* y = new float;
     float* x = new float;
     float* z = new float;
