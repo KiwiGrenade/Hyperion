@@ -8,11 +8,7 @@
 #include <iostream>
 #include "Vectors.h"
 #include <fstream>
-void render3D (
-    const size_t& width,
-    const size_t& height,
-    const std::vector<Vec3f>& imageBuffer,
-    std::ofstream& file
-    );
+void render3D(const size_t &width, const size_t &height, const std::vector<Vec3f> &imageBuffer, std::ofstream &file,
+              const float &colourLimit);
 
 #endif //INC_3DVECTOR_RENDER_H
