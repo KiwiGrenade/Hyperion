@@ -3,4 +3,5 @@ project(3DVector)
 
 set(CMAKE_CXX_STANDARD 23)
 
-add_executable(3DVector Vector3D.cpp Vectors.h Render.cpp Render.h)
+add_executable(3DVector main.cpp Vectors.h Render.cpp Render.h
+)

@@ -3,7 +3,11 @@
 //
 
 #include "Render.h"
-void render3D(const size_t &width, const size_t &height, const std::vector<Vec3f> &imageBuffer, std::ofstream &file,
+
+void render3D(const size_t &width,
+              const size_t &height,
+              const std::vector<Vec3f> &imageBuffer,
+              std::ofstream &file,
               const float &colourLimit)
 {
     std::string header {"P6\n"};
