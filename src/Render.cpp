@@ -6,14 +6,15 @@
 
 void makeHeader(const size_t &width,
                 const size_t &height,
-                const float &colourLimit, std::string &header) {
+                const float &colourLimit,
+                std::string &header) {
     header.append("P6\n");
     header.append(std::to_string(width));
-    header.append(" ");
+    header.push_back(' ');
     header.append(std::to_string(height));
-    header.append("\n");
+    header.push_back('\n');
     header.append(std::to_string(colourLimit));
-    header.append("\n");
+    header.push_back('\n');
 }
 
 void render3D(const size_t &width,
