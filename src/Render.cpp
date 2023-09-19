@@ -4,19 +4,27 @@
 
 #include "Render.h"
 
-void render3D(const size_t &width,
-              const size_t &height,
-              const std::vector<Vec3f> &imageBuffer,
-              std::ofstream &file,
-              const float &colourLimit)
-{
-    std::string header {"P6\n"};
+void makeHeader(const size_t &width,
+                const size_t &height,
+                const float &colourLimit, std::string &header) {
+    header.append("P6\n");
     header.append(std::to_string(width));
     header.append(" ");
     header.append(std::to_string(height));
     header.append("\n");
     header.append(std::to_string(colourLimit));
     header.append("\n");
+}
+
+void render3D(const size_t &width,
+              const size_t &height,
+              const std::vector<Vec3f> &imageBuffer,
+              std::ofstream &file,
+              const float &colourLimit)
+{
+    std::string header;
+
+    makeHeader(width, height, colourLimit, header);
 
     file << header;
 
