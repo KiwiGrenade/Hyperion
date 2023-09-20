@@ -8,7 +8,7 @@ void makeHeader(const size_t &width,
                 const size_t &height,
                 const float &colourLimit,
                 std::string &header) {
-    header.append("P6\n");
+    header.append("P3\n");
     header.append(std::to_string(width));
     header.push_back(' ');
     header.append(std::to_string(height));
@@ -35,7 +35,7 @@ void render3D(const size_t &width,
         for (size_t i = 0; i < width * height; i++) {
             for (size_t k = 0; k < 3; k++) {
                 max = std::max(max, imageBuffer[i][k]);
-                file << static_cast<char>(imageBuffer[i][k]) << " ";
+                file << std::to_string(imageBuffer[i][k]) << " ";
             }
         }
         if(max > colourLimit) {
