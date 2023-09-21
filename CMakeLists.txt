@@ -3,4 +3,6 @@ project(3DVector)
 
 set(CMAKE_CXX_STANDARD 23)
 
-add_executable(3DVector Vector3D.cpp Vectors.h Render.cpp Render.h)
+#TODO: Refactor this so src/ won't be necessary
+add_executable(3DVector src/main.cpp src/Vectors.h src/Render.cpp src/Render.h
+)
