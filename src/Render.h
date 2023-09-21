@@ -14,9 +14,4 @@ void render3D(const size_t &width,
               std::ofstream &file,
               const float &colourLimit);
 
-void makeHeader(const size_t &width,
-                const size_t &height,
-                const float &colourLimit,
-                std::string &header);
-
 #endif //INC_3DVECTOR_RENDER_H
